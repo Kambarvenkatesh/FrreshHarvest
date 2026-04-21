@@ -1,0 +1,146 @@
+.orders-page {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+}
+
+.orders-page h1 {
+  color: #2d5016;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.loading, .error, .no-orders {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+}
+
+.loading {
+  color: #4CAF50;
+}
+
+.error {
+  color: #ff6b6b;
+  background-color: #ffe0e0;
+}
+
+.no-orders {
+  color: #666;
+}
+
+.orders-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.order-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #4CAF50;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.order-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d5016;
+}
+
+.order-header p {
+  margin: 0;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.order-status {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.order-status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.order-status.processing {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.order-status.shipped {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.order-status.delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.order-status.cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.order-items-list {
+  padding: 1rem 1.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.order-item-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item-row:last-child {
+  border-bottom: none;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  color: #2d5016;
+  border-top: 1px solid #eee;
+}
+
+.order-total {
+  color: #4CAF50;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .orders-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .order-status {
+    align-self: flex-start;
+  }
+}
